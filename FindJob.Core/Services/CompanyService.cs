@@ -1,6 +1,7 @@
 ﻿using FindJob.Core.Contracts;
 using FindJob.Infrastructure.Data.Common;
 using FindJob.Infrastructure.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,22 @@ namespace FindJob.Core.Services
             await repo.AddAsync(company);
             await repo.SaveChangesAsync();
                 
+        }
+
+        public async Task<string> GetCompanyId(string userId)
+        {
+            var company = await repo.All<Company>()
+                .FirstOrDefaultAsync(x => x.UserId == userId);
+
+            return company.Id;
+
+        }
+
+        public async Task<bool> IsCompanyExist(string userId)
+        {
+            var company = await repo.All<Company>().FirstOrDefaultAsync(company => company.UserId == userId);
+
+            return company != null;
         }
     }
 }

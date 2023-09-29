@@ -17,7 +17,7 @@ namespace FindJob.Infrastructure.Configurations
             {
                 Id = "a2063af2-2e07-42af-8121-9dc6ec8e5ad6",
                 UserId = "26f0964f-eb05-4a1a-b320-87ed04331d3a",
-                Abilities = new List<string>() { "C#", "ASP.NET", "Entity Framework", "JavaScript", "Pyton", "PHP" }.ToString(),
+                Abilities = string.Join( ", ", new List<string>() { "C#", "ASP.NET", "Entity Framework", "JavaScript", "Pyton", "PHP" }),
                 CompanyId = null, 
                 GraduationSchool = "ППМГ Никола Обрешков", 
 

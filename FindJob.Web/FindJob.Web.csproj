@@ -19,10 +19,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="toastr" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Find Job.Data\FindJob.Infrastructure.csproj" />
+    <ProjectReference Include="..\FindJob.Common\FindJob.Common.csproj" />
     <ProjectReference Include="..\FindJob.Core\FindJob.Core.csproj" />
   </ItemGroup>
 

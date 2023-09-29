@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FindJob.Web.Controllers
 {
-    [Authorize]
-    public class AccountController : Controller
+   
+    public class AccountController : BaseController
     {
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;

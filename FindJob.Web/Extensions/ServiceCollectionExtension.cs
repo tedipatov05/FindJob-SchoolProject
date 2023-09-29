@@ -13,6 +13,7 @@ namespace FindJob.Web.Extensions
             services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IProgrammerService, ProgrammerService>();
             services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IJobOfferService, JobOfferService>();
 
             return services;
         }

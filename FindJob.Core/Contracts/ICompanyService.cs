@@ -9,5 +9,9 @@ namespace FindJob.Core.Contracts
     public interface ICompanyService
     {
         Task Create(string userId);
+
+        Task<bool> IsCompanyExist(string userId);
+
+        Task<string> GetCompanyId(string userId);
     }
 }

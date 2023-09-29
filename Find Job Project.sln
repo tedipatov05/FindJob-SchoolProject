@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindJob.Infrastructure", "F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindJob.Core", "FindJob.Core\FindJob.Core.csproj", "{E181F558-8253-45DC-B2DB-E7EC66D45ACC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindJob.Web", "FindJob.Web\FindJob.Web.csproj", "{4E68209E-21A4-40AF-9BB3-F1851434622E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindJob.Web", "FindJob.Web\FindJob.Web.csproj", "{4E68209E-21A4-40AF-9BB3-F1851434622E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindJob.Common", "FindJob.Common\FindJob.Common.csproj", "{DBCFD0C4-24AB-4531-A033-F7D0C8487C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4E68209E-21A4-40AF-9BB3-F1851434622E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E68209E-21A4-40AF-9BB3-F1851434622E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E68209E-21A4-40AF-9BB3-F1851434622E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCFD0C4-24AB-4531-A033-F7D0C8487C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCFD0C4-24AB-4531-A033-F7D0C8487C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCFD0C4-24AB-4531-A033-F7D0C8487C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCFD0C4-24AB-4531-A033-F7D0C8487C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

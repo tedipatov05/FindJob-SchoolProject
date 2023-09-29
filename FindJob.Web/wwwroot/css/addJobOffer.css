@@ -1,0 +1,7 @@
+﻿.row {
+
+    background-size: cover !important;
+    background-image: url(../images/bg-add.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
