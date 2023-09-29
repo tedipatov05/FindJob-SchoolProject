@@ -61,7 +61,10 @@ namespace FindJob.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> AllOffers()
         {
-            return View();
+
+            var jobOffers = await jobOfferService.GetAllJobOffers();
+
+            return View(jobOffers);
         }
 
     }

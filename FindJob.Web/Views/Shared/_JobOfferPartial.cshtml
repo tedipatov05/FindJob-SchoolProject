@@ -1,0 +1,18 @@
+﻿@using FindJob.Core.Models.JobOffer;
+
+
+@model JobOfferViewModel;
+
+
+<div class="col-md-4">
+    <div class="card dish-card">
+        
+        <div class="card-body">
+            <h5 class="card-title text-black">@Model.TypeOfJob</h5>
+            <p class="card-text text-black">@Model.CompanyName</p>
+            <p class="card-text text-black">@Model.Description</p>
+            <p class="card-ingredients text-black">Ingredients: @Model.SearchedAbilities</p>
+            <p class="card-price text-black"> @Model.Salary лв.</p>
+        </div>
+    </div>
+</div>

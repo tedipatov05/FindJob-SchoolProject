@@ -11,6 +11,6 @@ namespace FindJob.Core.Contracts
     {
         Task AddJobOffer(string companyId, JobOfferFormModel jobOffer);
 
-
+        Task<List<JobOfferViewModel>> GetAllJobOffers();
     }
 }
