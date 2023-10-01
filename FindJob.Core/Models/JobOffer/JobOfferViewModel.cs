@@ -8,6 +8,7 @@ namespace FindJob.Core.Models.JobOffer
 {
     public class JobOfferViewModel
     {
+        public string Id { get; set; } = null;
         public string TypeOfJob { get; set; } = null!;
 
         public string Description { get; set; } = null!;

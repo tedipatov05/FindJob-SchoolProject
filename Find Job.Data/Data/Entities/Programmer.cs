@@ -31,14 +31,14 @@ namespace FindJob.Infrastructure.Data.Entities
         public string UserId { get; set; } = null!;
 
         [Comment("User")]
-        public User User { get; set; } = null!;
+        public virtual User User { get; set; } = null!;
 
         [Comment("Company Id")]
         [ForeignKey(nameof(Company))]
         public string? CompanyId { get; set; }
 
         [Comment("Comment")]
-        public Company? Company { get; set; }
+        public virtual Company? Company { get; set; }
 
 
         [Comment("Abilities")]

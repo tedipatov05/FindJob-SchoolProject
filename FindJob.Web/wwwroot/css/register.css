@@ -3,15 +3,23 @@
 *, body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    /*-webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;*/
+    -moz-osx-font-smoothing: grayscale;
+    height: fit-content;
 }
 
-html, body {
-    height: 100%;
+body {
+    
     /*background-color: coral;*/
-    overflow: hidden;
+    height: auto;
+    overflow: scroll;
+
+}
+
+.form-body{
+    height: auto;
+    height: fit-content;
 }
 
 
@@ -21,8 +29,8 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
-    background: url(../images/bg-image.jpg);
+    min-height: 58vmax;
+    background: url(../images/copy-space-glasses-desk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -42,7 +50,7 @@ html, body {
         -webkit-align-items: center;
         align-items: center;
         padding: 5px;
-        
+       
     }
 
 .form-content .form-items {

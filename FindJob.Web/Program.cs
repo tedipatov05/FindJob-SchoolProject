@@ -17,7 +17,8 @@ namespace FindJob.Web
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<FindJobDbContext>(options =>
-                options.UseSqlServer(connectionString));
+                options.UseLazyLoadingProxies().UseSqlServer(connectionString)
+                );
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<User>(options =>
@@ -34,6 +35,13 @@ namespace FindJob.Web
             })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<FindJobDbContext>();
+
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/User/Login";
+                options.LogoutPath = "/User/Logout";
+
+            });
 
             builder.Services.AddServices();
 

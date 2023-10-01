@@ -36,7 +36,7 @@
                 <label asp-for="JobOffersSorting"></label>
                 <select asp-for="JobOffersSorting" class="form-control">
                     <option value="0">Type Of Job (Ascending) </option>
-                    <option value="1">Type Of Job (Descending)</option>
+                    <option value="1">Salary (Ascending)</option>
                     <option value="2">Company (Ascending)</option>
                     <option value="3">Company (Descending)</option>
                 </select>
@@ -70,8 +70,8 @@
 <div class="row mb-4">
     <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
         <a class="btn btn-light btn-rounded @(Model.CurrentPage == 1 ? "disabled" : string.Empty)"
-           asp-controller="Dish"
-           asp-action="Menu"
+           asp-controller="JobOffer"
+           asp-action="AllOffers"
            asp-route-currentPage="@previousPage"
            asp-route-category="@Model.TypeOfJob"
            asp-route-searchTerm="@Model.SearchString"
@@ -86,8 +86,8 @@
     <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-end">
         <a class="btn btn-light btn-rounded
            @(shouldNextPageBeDisabled ? "disabled" : string.Empty)"
-           asp-controller="Dish"
-           asp-action="Menu"
+           asp-controller="JobOffer"
+           asp-action="AllOffers"
            asp-route-currentPage="@(Model.CurrentPage + 1)"
            asp-route-category="@Model.TypeOfJobs"
            asp-route-searchTerm="@Model.SearchString"
@@ -97,12 +97,12 @@
 
 @if (!Model.JobOffers.Any())
 {
-    <h2 class="text-center text-black">No dishes found by the given criteria!</h2>
+    <h2 class="text-center text-black">No offers found by the given criteria!</h2>
 }
 else
 {
     <section class="main-content">
-        <h1 class="text-center text-uppercase text-black">Menu</h1>
+        <h1 class="text-center text-uppercase text-black">Offers</h1>
         <div class="container">
             <div class="row" style="margin-left: 140px;">
                 @foreach (var offer in Model.JobOffers)
@@ -116,6 +116,6 @@ else
 }
 
 
-@*@section Styles{
-    <link rel="stylesheet" href="~/css/dish.css" asp-append-version="true" />
-}*@
+@section Styles{
+    <link rel="stylesheet" href="~/css/offer.css" asp-append-version="true" />
+}

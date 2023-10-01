@@ -17,7 +17,7 @@ namespace FindJob.Infrastructure.Data.Entities
         {
             this.Id = Guid.NewGuid().ToString();
             this.Candidates = new HashSet<Programmer>();
-            
+            this.IsActive = true;
         }
 
         [Comment("Id of the offer")]
@@ -36,17 +36,20 @@ namespace FindJob.Infrastructure.Data.Entities
         [MaxLength(JobSearchedAblilitiesMaxLength)]
         public string SearchedAbilities { get; set; } = null!;
 
-        public ICollection<Programmer> Candidates { get; set; }
+        public virtual ICollection<Programmer> Candidates { get; set; }
 
         [Comment("Company Id")]
         [ForeignKey(nameof(Company))]
         public string CompanyId { get; set; } = null!;
 
         [Comment("Company")]
-        public Company Company { get; set; } = null!;
+        public virtual Company Company { get; set; } = null!;
 
         [Comment("Salary")]
         public decimal Salary { get; set; }
+
+        [Comment("Is Active")]
+        public bool IsActive { get; set; } 
 
 
 

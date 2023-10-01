@@ -2,7 +2,7 @@
 @model JobOfferFormModel;
 
 @{
-    ViewData["Title"] = "Add Job Offer";
+    ViewData["Title"] = "Edit Job Offer";
 }
 
 
@@ -11,8 +11,8 @@
 <div class="row">
     <h2 class="text-center text-white">@ViewData["Title"]</h2>
 
-    <partial name="_JobOfferFormPartial" ></partial>
-    
+    <partial name="_JobOfferFormPartial"></partial>
+
 </div>
 
 @section Styles{
@@ -22,7 +22,3 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-
-
-
-

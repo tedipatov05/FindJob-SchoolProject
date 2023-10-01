@@ -4,6 +4,7 @@ using FindJob.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Find_Job.Data.Migrations
 {
     [DbContext(typeof(FindJobDbContext))]
-    partial class FindJobDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230930182150_AddedIsActiveProperty")]
+    partial class AddedIsActiveProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -252,16 +254,16 @@ namespace Find_Job.Data.Migrations
                             AccessFailedCount = 0,
                             Address = "ул. Александър Батенберг 54",
                             City = "Казанлък",
-                            ConcurrencyStamp = "2d2550e4-cc24-4905-b070-25c74d9a7a25",
+                            ConcurrencyStamp = "379a61a3-4e73-4503-a036-e66b2dd2df5d",
                             Country = "България",
                             EmailConfirmed = false,
                             IsActive = true,
                             LockoutEnabled = false,
                             Name = "IT Jobs",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJ0HVDU9xvl3v5Afj3+8N2qcajU515MfVHTtdiArihK+lDDWAIWzJDvT+iEnBnZmlA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGR4ndHocqn6ZfTxLofdR+VzW5rB4fg1c4ukjUDqdaANFozF5WH9RbflmCU4bB9+MQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePictureUrl = "https://res.cloudinary.com/ddriqreo7/image/upload/v1695190652/Images%20Find%20Job/2606535_5870_n9zxva.jpg",
-                            SecurityStamp = "590d9fb0-a2f1-4fea-8378-9e8e9ed44944",
+                            SecurityStamp = "45c97ab7-5ba2-4012-acd5-089670c1980f",
                             TwoFactorEnabled = false,
                             UserName = "itjobs"
                         },
@@ -271,16 +273,16 @@ namespace Find_Job.Data.Migrations
                             AccessFailedCount = 0,
                             Address = "ул. Стара планина 32",
                             City = "Казанлък",
-                            ConcurrencyStamp = "d9920d50-64c2-43bd-b6c3-9ce269664b06",
+                            ConcurrencyStamp = "f0fd0e93-f90d-4b6e-9a1c-2d98bede5e63",
                             Country = "България",
                             EmailConfirmed = false,
                             IsActive = true,
                             LockoutEnabled = false,
                             Name = "Ivan Ivanov",
-                            PasswordHash = "AQAAAAEAACcQAAAAEO6hq8Ig0nIxjeIgROdbCZ0/AMtMn09BgxMh9N72PIt8QKfMBIYtg44ezfdIGA257g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEUrHrtcVK1ThoeGyirmQRU6AB1oNdsGDnP2MXALt/txxxK8K4CfVGCLN7KgF38fzQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePictureUrl = "https://res.cloudinary.com/ddriqreo7/image/upload/v1695190901/Images%20Find%20Job/person_wiajnb.jpg",
-                            SecurityStamp = "85a3f023-6d72-4fcc-ace1-02244c9f8d3e",
+                            SecurityStamp = "0eab5561-c0a0-4dec-9d8d-22469f072dc1",
                             TwoFactorEnabled = false,
                             UserName = "ivanivanov"
                         });
@@ -316,14 +318,14 @@ namespace Find_Job.Data.Migrations
                         new
                         {
                             Id = "a03f9f62-f106-4b1a-b1f9-eba622db3c92",
-                            ConcurrencyStamp = "3748e9be-485b-42f5-b0f7-eefab46b34ca",
+                            ConcurrencyStamp = "0a7343db-86ac-44dd-ac0d-787df2010dea",
                             Name = "Programmer",
                             NormalizedName = "PROGRAMMER"
                         },
                         new
                         {
                             Id = "c34ebc61-94a5-40c5-a310-798532235d8e",
-                            ConcurrencyStamp = "966670df-7b96-45b1-9c3a-26752d24f397",
+                            ConcurrencyStamp = "eaa12533-bd98-49ba-8e9e-d7100a962bec",
                             Name = "Company",
                             NormalizedName = "COMPANY"
                         });

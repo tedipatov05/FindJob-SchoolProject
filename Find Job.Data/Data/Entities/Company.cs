@@ -31,13 +31,13 @@ namespace FindJob.Infrastructure.Data.Entities
         public string UserId { get; set; } = null!;
 
         [Comment("User")]
-        public User User { get; set; } = null!;
+        public virtual User User { get; set; } = null!;
 
         public bool IsActive { get; set; }
 
-        public ICollection<Programmer> Employees { get; set; }  
+        public virtual ICollection<Programmer> Employees { get; set; }
 
-        public ICollection<JobOffer> Offers { get; set; }
+        public virtual ICollection<JobOffer> Offers { get; set; }
 
     }
 }

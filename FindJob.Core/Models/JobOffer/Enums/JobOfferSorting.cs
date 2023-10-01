@@ -8,11 +8,10 @@ namespace FindJob.Core.Models.JobOffer.Enums
 {
     public enum JobOfferSorting
     {
-        TypeOfJobAsceinding, 
-        TypeOfJobDescending, 
+        TypeOfJob, 
+        Salary, 
         CompanyNameAscending, 
         CompanyNameDescending
-
 
     }
 }

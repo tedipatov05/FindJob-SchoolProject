@@ -1,18 +1,36 @@
-﻿@using FindJob.Core.Models.JobOffer;
-
+﻿@using FindJob.Core.Contracts;
+@using FindJob.Core.Models.JobOffer;
+@inject IProgrammerService programerService;
 
 @model JobOfferViewModel;
+
+@{
+    string userId = User.GetId();
+    var isCandidate = await programerService.IsCandidateToOffer(userId, Model.Id);
+}
 
 
 <div class="col-md-4">
     <div class="card dish-card">
-        
         <div class="card-body">
+
             <h5 class="card-title text-black">@Model.TypeOfJob</h5>
             <p class="card-text text-black">@Model.CompanyName</p>
             <p class="card-text text-black">@Model.Description</p>
-            <p class="card-ingredients text-black">Ingredients: @Model.SearchedAbilities</p>
+            <p class="card-ingredients text-black">Searched Abilities: @Model.SearchedAbilities</p>
             <p class="card-price text-black"> @Model.Salary лв.</p>
+
+            @if (User.IsInRole("Company"))
+            {
+                <a asp-action="Edit" asp-controller="JobOffer" asp-route-jobOfferId="@Model.Id" class="btn btn-warning edit-btn">Edit</a>
+                <a asp-action="Delete" asp-controller="JobOffer" asp-route-jobOfferId="@Model.Id" class="btn btn-danger edit-btn">Delete</a>
+                <a asp-action="Candidates" asp-controller="Company" asp-route-offerId="@Model.Id" class="btn btn-warning edit-btn">Candidates</a>
+            }
+            else if (User.IsInRole("Programmer") && !isCandidate)
+            {
+                <a asp-action="Candidate" asp-controller="Company" asp-route-offerId="@Model.Id" class="btn btn-warning edit-btn">Candidate</a>
+            }
+            
         </div>
     </div>
 </div>
